@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    padding: 0 18px;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(28, 90, 90);
+}
+
+.wrapper {
+
+    width: 720px;
+    background: white;
+    border-radius: 7px;
+}
+
+.wrapper header{
+    font-size: 25px;
+    font-weight: 500;
+    padding: 20px 30px;
+    border-bottom: 1px solid #b2a0a0;
+}
+
+.wrapper form {
+    margin:35px 30px;
+}
+form .field{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0px;
+}
+form .dbl-field {
+    align-items: center;
+    margin-bottom: 25px;
+    justify-content: space-between;
+}
+
+.dbl-field .field {
+    height: 50px;
+    position: relative;
+    width: calc(100% / 2 - 13px);
+}
+
+form .field input,
+form .message textarea{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    padding: 0 18px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #bfbfbf;
+}
+
+form .field input ::placeholder,
+form .message textarea::placeholder {
+    color: #bfbfbf;
+}
+
+form .field input:focus,
+form .message textarea:focus{
+    border: 2px solid lightgreen;
+}
+.wrapper form i {
+  position: absolute;
+  right: 4px;
+  top: 40%;
+  color: #bfbfbf;
+  font-size: 17px;
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+
+field .field input:focus i{
+    color: lightgreen;
+}
+form .message{
+    position: relative;
+}
+
+form .message i{
+    top: 20px;
+    font-size: 20px;
+}
+
+button {
+    width: 100%;
+    font-size: 15px;
+    padding: 0px 25px;
+    align-items: center;
+    color: #fff;
+    border: none;
+    background: rgb(31, 110, 125);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+span{
+    font-size: 15px;
+    color: #3f618c;
+    display: none;
+
+}
+
+@media(max-width: 600px){
+    .wrapper header{
+        text-align: center;
+    }
+    form .dbl-field{
+        margin-bottom: 0px;
+        flex-direction: column;
+    }
+    .dbl-field .field{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    button{
+        width: 100%;
+    }
+  }
+
